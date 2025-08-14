@@ -90,6 +90,7 @@ Aynı verinin yoğunluk analizi; kırmızı alanlar yüksek deprem aktivitesini,
 Aşağıdaki adımları terminalde çalıştırın:
 
 ```bash
-git clone https://github.com/kullanici_adin/Turkiye_Deprem_Analizi.git
+git clone https://github.com/berkekarakanli/Turkey-Earthquake-Analysis.git
 pip install -r requirements.txt
-jupyter notebook turkiye-deprem-analizi.ipynb
+jupyter notebook Turkey-Earthquake-Analysis.ipynb
+
