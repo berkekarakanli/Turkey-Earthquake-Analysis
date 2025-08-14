@@ -24,7 +24,7 @@ Amaç, deprem verilerini anlamak, görselleştirmek ve makine öğrenmesi ile de
   - En iyi 3 model seçildi ve **Cross-Validation** ile doğrulandı.
   - **RandomizedSearchCV** kullanılarak hiperparametre optimizasyonu yapıldı.
   - En iyi performans **Random Forest Classifier** modelinde elde edildi.
-  - Sonuç doğruluk oranı: **%86**
+  - Sonuç doğruluk oranı: **%86.35**
 
 ---
 
@@ -44,18 +44,6 @@ Aynı verinin yoğunluk analizi; kırmızı alanlar yüksek deprem aktivitesini,
 
 ---
 
-## 🛠 Kullanılan Teknolojiler ve Kütüphaneler
-
-- **Python** – Veri işleme ve analiz
-- **Pandas, NumPy** – Veri manipülasyonu
-- **Matplotlib, Seaborn** – Statik görselleştirme
-- **Plotly, Folium** – Etkileşimli görselleştirme
-- **Scikit-learn** – Makine öğrenmesi algoritmaları
-- **LazyPredict** – Hızlı model karşılaştırma
-- **RandomizedSearchCV** – Hiperparametre optimizasyonu
-
----
-
 ## 📈 Makine Öğrenmesi Süreci
 
 ### 1️⃣ LazyPredict ile Model Karşılaştırma
@@ -68,14 +56,17 @@ Aynı verinin yoğunluk analizi; kırmızı alanlar yüksek deprem aktivitesini,
 | DecisionTreeClassifier | 0.82 |
 | LogisticRegression | 0.78 |
 
-📌 En yüksek doğruluğu veren **ilk 3 model**:  
-- XGBClassifier  
-- RandomForestClassifier  
-- GradientBoostingClassifier  
+📌 En yüksek doğruluğu veren **ilk 3 model** seçildi:
+- XGBClassifier
+- RandomForestClassifier
+- GradientBoostingClassifier
 
 ---
 
-### 2️⃣ Cross-Validation & RandomizedSearchCV Sonuçları
+### 2️⃣ Cross Validation & Hyperparameter Tuning
+
+- **RandomizedSearchCV** kullanılarak en iyi parametreler bulundu.
+- 5 katlı çapraz doğrulama ile test edildi.
 
 | Model | En İyi Parametreler | CV Skor (Mean) |
 |-------|--------------------|---------------|
@@ -85,19 +76,20 @@ Aynı verinin yoğunluk analizi; kırmızı alanlar yüksek deprem aktivitesini,
 
 ---
 
-### 3️⃣ Sonuçlar
+## 📊 Sonuçlar
 
-- **Random Forest** modeli en yüksek doğruluk oranına ulaştı (**%86.35**)
-- LazyPredict ile hızlı model karşılaştırması yapıldı, ardından Cross Validation ve RandomizedSearchCV ile en iyi parametreler belirlendi.
-- Yaygın deprem türlerinde yüksek başarı, nadir türlerde daha düşük doğruluk elde edildi.
-
----
-
-## 📌 Kaynaklar
-
-- [Kaggle Notebook ve Veri Seti](https://www.kaggle.com/code/yarenzoul/t-rkiye-deprem-analizi)
+- **Doğruluk (Accuracy)**: %86.35 (Random Forest ile)
+- **Confusion Matrix** görselleştirildi
+- LazyPredict ile hızlı model karşılaştırması yapıldı, ardından Cross Validation ve RandomizedSearchCV ile en iyi parametreler belirlendi
+- Yaygın deprem türlerinde yüksek başarı, nadir türlerde daha düşük doğruluk gözlendi
 
 ---
 
-## 📜 Lisans
-Bu proje **MIT Lisansı** ile lisanslanmıştır.
+## 💻 Nasıl Çalıştırılır
+
+Aşağıdaki adımları terminalde çalıştırın:
+
+```bash
+git clone https://github.com/kullanici_adin/Turkiye_Deprem_Analizi.git
+pip install -r requirements.txt
+jupyter notebook turkiye-deprem-analizi.ipynb
