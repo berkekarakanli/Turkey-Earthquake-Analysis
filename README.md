@@ -85,6 +85,13 @@ Aynı verinin yoğunluk analizi; kırmızı alanlar yüksek deprem aktivitesini,
 
 ---
 
+## 📂 Veri Seti
+
+Bu projede kullanılan veri seti **Kaggle** üzerinden alınmıştır:  
+🔗 [Türkiye Deprem Verileri - Kaggle](https://www.kaggle.com/datasets/yarenzoulturkiye-deprem-verileri)
+
+---
+
 ## 💻 Nasıl Çalıştırılır
 
 Aşağıdaki adımları terminalde çalıştırın:
@@ -93,4 +100,3 @@ Aşağıdaki adımları terminalde çalıştırın:
 git clone https://github.com/berkekarakanli/Turkey-Earthquake-Analysis.git
 pip install -r requirements.txt
 jupyter notebook Turkey-Earthquake-Analysis.ipynb
-
