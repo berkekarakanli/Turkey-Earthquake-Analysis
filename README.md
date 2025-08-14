@@ -1,4 +1,4 @@
-# Türkiye Deprem Analizi Projesi
+# 🇹🇷 Türkiye Deprem Analizi Projesi
 
 Bu proje, Türkiye'deki depremleri **veri bilimi**, **görselleştirme** ve **makine öğrenmesi** teknikleriyle analiz etmektedir.  
 Amaç, deprem verilerini anlamak, görselleştirmek ve makine öğrenmesi ile deprem türü tahmini yapmaktır.
@@ -58,20 +58,46 @@ Aynı verinin yoğunluk analizi; kırmızı alanlar yüksek deprem aktivitesini,
 
 ## 📈 Makine Öğrenmesi Süreci
 
-1. **LazyPredict ile Model Karşılaştırma**  
-   - 5 farklı model denendi.
-   - En yüksek doğruluk veren ilk 3 model seçildi.
+### 1️⃣ LazyPredict ile Model Karşılaştırma
 
-2. **Cross-Validation**  
-   - Seçilen 3 model 5 katlı çapraz doğrulama ile test edildi.
+| Model | Accuracy |
+|-------|----------|
+| **XGBClassifier** | 0.87 |
+| **RandomForestClassifier** | 0.87 |
+| GradientBoostingClassifier | 0.84 |
+| DecisionTreeClassifier | 0.82 |
+| LogisticRegression | 0.78 |
 
-3. **Hiperparametre Optimizasyonu**  
-   - `RandomizedSearchCV` ile en iyi parametreler belirlendi.
-   - En iyi sonuç **Random Forest Classifier** ile elde edildi.
-
-4. **Sonuçlar**  
-   - Genel doğruluk: **%86**
-   - Yaygın deprem tiplerinde yüksek başarı, nadir tiplerde düşük doğruluk
+📌 En yüksek doğruluğu veren **ilk 3 model**:  
+- XGBClassifier  
+- RandomForestClassifier  
+- GradientBoostingClassifier  
 
 ---
 
+### 2️⃣ Cross-Validation & RandomizedSearchCV Sonuçları
+
+| Model | En İyi Parametreler | CV Skor (Mean) |
+|-------|--------------------|---------------|
+| **RandomForestClassifier** | `{'n_estimators': 200, 'max_features': 'sqrt', 'max_depth': None}` | **0.8635** |
+| **XGBClassifier** | `{'subsample': 1.0, 'n_estimators': 200, 'max_depth': 5, 'learning_rate': 0.1, 'colsample_bytree': 0.8}` | **0.8565** |
+| **GradientBoostingClassifier** | `{'learning_rate': 0.1, 'n_estimators': 100, 'max_depth': 3}` | **0.8377** |
+
+---
+
+### 3️⃣ Sonuçlar
+
+- **Random Forest** modeli en yüksek doğruluk oranına ulaştı (**%86.35**)
+- LazyPredict ile hızlı model karşılaştırması yapıldı, ardından Cross Validation ve RandomizedSearchCV ile en iyi parametreler belirlendi.
+- Yaygın deprem türlerinde yüksek başarı, nadir türlerde daha düşük doğruluk elde edildi.
+
+---
+
+## 📌 Kaynaklar
+
+- [Kaggle Notebook ve Veri Seti](https://www.kaggle.com/code/yarenzoul/t-rkiye-deprem-analizi)
+
+---
+
+## 📜 Lisans
+Bu proje **MIT Lisansı** ile lisanslanmıştır.
