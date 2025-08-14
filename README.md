@@ -3,6 +3,8 @@
 Bu proje, Türkiye'deki depremleri **veri bilimi**, **görselleştirme** ve **makine öğrenmesi** teknikleriyle analiz etmektedir.  
 Amaç, deprem verilerini anlamak, görselleştirmek ve makine öğrenmesi ile deprem türü tahmini yapmaktır.
 
+
+
 ---
 
 ## 📊 Proje İçeriği
@@ -27,6 +29,15 @@ Amaç, deprem verilerini anlamak, görselleştirmek ve makine öğrenmesi ile de
   - Sonuç doğruluk oranı: **%86.35**
 
 ---
+
+
+## 📂 Veri Seti
+
+Bu projede kullanılan veri seti **Kaggle** üzerinden alınmıştır:  
+🔗 [Türkiye Deprem Verileri - Kaggle](https://www.kaggle.com/datasets/yarenzoul/turkiye-deprem-verileri)
+
+---
+
 
 ## 🌍 Görseller
 
@@ -85,12 +96,6 @@ Aynı verinin yoğunluk analizi; kırmızı alanlar yüksek deprem aktivitesini,
 
 ---
 
-## 📂 Veri Seti
-
-Bu projede kullanılan veri seti **Kaggle** üzerinden alınmıştır:  
-🔗 [Türkiye Deprem Verileri - Kaggle](https://www.kaggle.com/datasets/yarenzoulturkiye-deprem-verileri)
-
----
 
 ## 💻 Nasıl Çalıştırılır
 
