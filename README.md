@@ -1,4 +1,4 @@
-# 🇹🇷 Türkiye Deprem Analizi Projesi
+# Türkiye Deprem Analizi Projesi
 
 Bu proje, Türkiye'deki depremleri **veri bilimi**, **görselleştirme** ve **makine öğrenmesi** teknikleriyle analiz etmektedir.  
 Amaç, deprem verilerini anlamak, görselleştirmek ve makine öğrenmesi ile deprem türü tahmini yapmaktır.
@@ -31,7 +31,7 @@ Amaç, deprem verilerini anlamak, görselleştirmek ve makine öğrenmesi ile de
 ## 🌍 Görseller
 
 ### Deprem Noktaları Haritası
-Türkiye genelinde 1999-2024 yılları arasında kaydedilen depremlerin merkez üsleri (epicenter) turuncu noktalarla gösterilmektedir.
+Türkiye genelinde 1999-2025 yılları arasında kaydedilen depremlerin merkez üsleri (epicenter) turuncu noktalarla gösterilmektedir.
 
 ![Deprem Noktaları](https://github.com/user-attachments/assets/9cf23a92-6cec-4253-8f95-77ea67eeb454)
 
