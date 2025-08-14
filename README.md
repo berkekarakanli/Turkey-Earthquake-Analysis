@@ -1,14 +1,7 @@
 # Türkiye Deprem Analizi Projesi
 
-
-  Bu proje, Türkiye'deki depremleri **veri bilimi**, **görselleştirme** ve **makine öğrenmesi** teknikleriyle analiz etmektedir.  
-  Amaç, deprem verilerini anlamak, görselleştirmek ve makine öğrenmesi ile deprem türü tahmini yapmaktır.
----
-
-## 📂 Veri Seti
-
-Bu projede kullanılan veri seti **Kaggle** üzerinden alınmıştır:  
-🔗 [Türkiye Deprem Verileri - Kaggle](https://www.kaggle.com/datasets/yarenzoul/turkiye-deprem-verileri)
+Bu proje, Türkiye'deki depremleri **veri bilimi**, **görselleştirme** ve **makine öğrenmesi** teknikleriyle analiz etmektedir.  
+Amaç, deprem verilerini anlamak, görselleştirmek ve makine öğrenmesi ile deprem türü tahmini yapmaktır.
 
 ---
 
@@ -19,35 +12,26 @@ Bu projede kullanılan veri seti **Kaggle** üzerinden alınmıştır:
   Eksik değerler temizlendi ve veri tipleri uygun formatlara dönüştürüldü.
 
 - **Görselleştirmeler**  
-  - Çubuk grafikler ve dağılım grafikleri
-  - Etkileşimli haritalar (Folium)
-  - Isı haritaları (Seismic yoğunluk analizi)
+  - Çubuk grafikler ve dağılım grafikleri  
+  - Etkileşimli haritalar (Folium)  
+  - Isı haritaları (seismic yoğunluk analizi)
 
 - **İstatistiksel Analizler**  
-  Deprem büyüklük tipleri (ML, MW, Md, MI, Mwp) açıklanarak veriye anlam kazandırıldı.
+  Deprem büyüklük tipleri (**ML**, **MW**, **Md**, **MI**, **Mwp**) açıklanarak veriye anlam kazandırıldı.
 
-- **Makine Öğrenmesi ile Deprem Türü Tahmini**
-  - **LazyPredict** ile 5 farklı model test edildi.
-  - En iyi 3 model seçildi ve **Cross-Validation** ile doğrulandı.
-  - **RandomizedSearchCV** kullanılarak hiperparametre optimizasyonu yapıldı.
-  - En iyi performans **Random Forest Classifier** modelinde elde edildi.
+- **Makine Öğrenmesi ile Deprem Türü Tahmini**  
+  - **LazyPredict** ile 5 farklı model test edildi.  
+  - En iyi 3 model seçildi ve **Cross-Validation** ile doğrulandı.  
+  - **RandomizedSearchCV** kullanılarak hiperparametre optimizasyonu yapıldı.  
+  - En iyi performans **Random Forest Classifier** modelinde elde edildi.  
   - Sonuç doğruluk oranı: **%86.35**
 
 ---
 
-
-## 📂 Veri Seti
-
-Bu projede kullanılan veri seti **Kaggle** üzerinden alınmıştır:  
-🔗 [Türkiye Deprem Verileri - Kaggle](https://www.kaggle.com/datasets/yarenzoul/turkiye-deprem-verileri)
-
----
-
-
 ## 🌍 Görseller
 
 ### Deprem Noktaları Haritası
-Türkiye genelinde 1999-2025 yılları arasında kaydedilen depremlerin merkez üsleri (epicenter) turuncu noktalarla gösterilmektedir.
+Türkiye genelinde 1999-2025 yılları arasında kaydedilen depremlerin merkez üsleri turuncu noktalarla gösterilmektedir.
 
 ![Deprem Noktaları](https://github.com/user-attachments/assets/9cf23a92-6cec-4253-8f95-77ea67eeb454)
 
@@ -72,16 +56,16 @@ Aynı verinin yoğunluk analizi; kırmızı alanlar yüksek deprem aktivitesini,
 | DecisionTreeClassifier | 0.82 |
 | LogisticRegression | 0.78 |
 
-📌 En yüksek doğruluğu veren **ilk 3 model** seçildi:
-- XGBClassifier
-- RandomForestClassifier
-- GradientBoostingClassifier
+📌 En yüksek doğruluğu veren **ilk 3 model** seçildi:  
+- XGBClassifier  
+- RandomForestClassifier  
+- GradientBoostingClassifier  
 
 ---
 
 ### 2️⃣ Cross Validation & Hyperparameter Tuning
 
-- **RandomizedSearchCV** kullanılarak en iyi parametreler bulundu.
+- **RandomizedSearchCV** kullanılarak en iyi parametreler bulundu.  
 - 5 katlı çapraz doğrulama ile test edildi.
 
 | Model | En İyi Parametreler | CV Skor (Mean) |
@@ -94,17 +78,21 @@ Aynı verinin yoğunluk analizi; kırmızı alanlar yüksek deprem aktivitesini,
 
 ## 📊 Sonuçlar
 
-- **Doğruluk (Accuracy)**: %86.35 (Random Forest ile)
-- **Confusion Matrix** görselleştirildi
-- LazyPredict ile hızlı model karşılaştırması yapıldı, ardından Cross Validation ve RandomizedSearchCV ile en iyi parametreler belirlendi
+- **Doğruluk (Accuracy)**: %86.35 (Random Forest ile)  
+- **Confusion Matrix** görselleştirildi  
+- LazyPredict ile hızlı model karşılaştırması yapıldı, ardından Cross Validation ve RandomizedSearchCV ile en iyi parametreler belirlendi  
 - Yaygın deprem türlerinde yüksek başarı, nadir türlerde daha düşük doğruluk gözlendi
 
 ---
 
+## 📂 Veri Seti
+
+Bu projede kullanılan veri seti Kaggle üzerinden alınmıştır:  
+[**Türkiye Deprem Verileri - Kaggle**](https://www.kaggle.com/datasets/yarenzoul/turkiye-deprem-verileri)
+
+---
 
 ## 💻 Nasıl Çalıştırılır
-
-Aşağıdaki adımları terminalde çalıştırın:
 
 ```bash
 git clone https://github.com/berkekarakanli/Turkey-Earthquake-Analysis.git
